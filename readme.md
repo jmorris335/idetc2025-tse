@@ -15,8 +15,8 @@ Dev:
 - Clone the repository: `git clone https://github.com/jmorris335/idetc2025-tse.git`
 - SSH info at Dreamhost
 - Navigate to `cturne9/ideas3design.com/idetc2025-tse` and use `git pull` to update from GitHub
-- MySQL DB is controlled using phpmyadmin, access from Dreamhost. Yoos er-na~me is `tseworkspace` and p_@$s~we-rd is `4meredith`.
+- MySQL DB is controlled using phpmyadmin, access from Dreamhost. `tseworkspace`/`4meredith`.
 
-*Note the security of this is atrocious, this needs to be deleted pretty soon after the conference.*
+*Note the security of this is atrocious, this needs to be updated pretty soon after the conference.*
 
 Best of luck!
