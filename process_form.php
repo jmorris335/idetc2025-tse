@@ -10,12 +10,15 @@ if (isset($_POST['params'])) {
     printf("<p>".$stage."</p>");
 }
 
-printf("<p> WORDS2 </p>");
+printf("<p> WORDS5 </p>");
 
 $conn = connectToServer(to_print: true);
 $conn->query("USE tseworkshop;");
 
-$col_names = array("GroupID", "Stage", "TreadWidth", "WheelBase", "RoofHeight", "SuspensionTravel", "MaxTorque", "Gearing", "TireDia", "EnergyCapacity", "FrameRailThick", "BodyPanelThick");
-$db_values = array_merge(array($group, $stage), $params);
-insertParams("configs", $col_names, $params, $conn);
+$col_names = array("GroupID", "Stage", "TrackWidth", "WheelBase", "RoofHeight", "SuspensionTravel", "MaxTorque", "Gearing", "TireDia", "EnergyCapacity", "FrameRailThick", "BodyPanelThick");
+$params_array = explode(",",$params);
+$db_values = array($group, $stage);
+$db_values = array_merge(array($group, $stage), $params_array);
+$query = insertParams("configs", $col_names, array($db_values));
+$conn->query($query);
 ?>

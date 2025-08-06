@@ -28,7 +28,7 @@ function connectToServer(string $servername = "mysql.ideas3design.com", string $
  * @param array $values_set A 2D array, where each item is an array of connected entities. Each entity must be ordered according to the order of the database table.
  * @return string the formatted query
 */
-function insertParams(string $table_name, array $col_set, array $values_set, mysqli $conn) {
+function insertParams(string $table_name, array $col_set, array $values_set) {
     $col_str = "";
     foreach ($col_set as $col) {
         $col_str .= $col;
@@ -61,9 +61,7 @@ function insertParams(string $table_name, array $col_set, array $values_set, mys
         }
     }
     
-    $query = "INSERT INTO TSEWorkshop.$table_name ($col_str) VALUES $values_str;";
-    printf($query);
-    $conn->query($query);
+    $query = "INSERT INTO tseworkshop.$table_name ($col_str) VALUES $values_str;";
     return $query;
 }
 
