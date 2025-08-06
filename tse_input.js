@@ -116,7 +116,10 @@ function showMetrics(metrics) {
     const new_row = metric_table.insertRow(1);
     metrics.forEach((metric, index) => {
         const cell = new_row.insertCell();
-        cell.textContent = metric.toFixed(1);
+        metric = metric * 100;
+        metric = metric.toFixed(1);
+        metric = parseInt(metric);
+        cell.textContent = metric;
     });
 }
 

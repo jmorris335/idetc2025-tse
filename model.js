@@ -8,7 +8,7 @@ function Param(name, label, order, column, min, max) {
 }
 
 let param_names = [
-    'tread_width',
+    'track_width',
     'wheel_base',
     'roof_height',
     'susp_travel',
@@ -21,7 +21,7 @@ let param_names = [
 ]
 
 let param_labels = [
-    ['Tread Width', 0],
+    ['Track Width', 0],
     ['Wheel Base', 0],
     ['Roof Height', 0],
     ['Suspension Travel', 1],
@@ -101,7 +101,6 @@ function GVfun(params) {
     let metrics = Array()
     for (let i=0; i < weights.length; i++) {
         var weighted_val = vectorProd(norm_params, tran_weights[i]);
-        // var norm_scalar = norms[1][i] / (norms[0][i] - norms[1][i]);
         weighted_val = (weighted_val - norms[1][i]) / (norms[0][i] - norms[1][i]);;
         metrics.push(weighted_val);
     }
