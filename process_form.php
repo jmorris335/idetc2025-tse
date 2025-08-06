@@ -1,19 +1,16 @@
 <?php
 include ("functions.php");
 
-if (isset($_POST['params'])) {
-    $params = $_POST['params'];
-    $group = $_POST['group_id'];
-    $stage = $_POST['stage'];
-    printf("<p>".$params."</p>");
-    printf("<p>".$group."</p>");
-    printf("<p>".$stage."</p>");
-}
-
-printf("<p> WORDS5 </p>");
+// if (isset($_POST['params'])) {
+//     $params = $_POST['params'];
+//     $group = $_POST['group_id'];
+//     $stage = $_POST['stage'];
+//     printf("<p>".$params."</p>");
+//     printf("<p>".$group."</p>");
+//     printf("<p>".$stage."</p>");
+// }
 
 $conn = connectToServer(to_print: true);
-$conn->query("USE tseworkshop;");
 
 $col_names = array("GroupID", "Stage", "TrackWidth", "WheelBase", "RoofHeight", "SuspensionTravel", "MaxTorque", "Gearing", "TireDia", "EnergyCapacity", "FrameRailThick", "BodyPanelThick");
 $params_array = explode(",",$params);

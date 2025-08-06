@@ -11,13 +11,13 @@
     <script src="tse_input.js" defer></script>
 </head>
 <body>
-  <h1>ASME IDETC Tradespace Exploration Workshop: Stage 1</h1>
+  <h1>ASME IDETC Tradespace Exploration Workshop: Stage 2</h1>
 
   <p>Enter values here:</p>
 
   <form method="post" action="" id="form-input" target="_self">
     Group ID: <input type="text" id="group_id" name="group_id">
-    <input type="hidden" id="stage" name="stage" value="1">
+    <input type="hidden" id="stage" name="stage" value="2">
     <div id="input-container"></div>
     <input type="submit">
   </form>
