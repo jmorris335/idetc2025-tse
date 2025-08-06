@@ -13,6 +13,11 @@
 <body>
   <h1>ASME IDETC Tradespace Exploration Workshop: Stage 2</h1>
 
+  <p><emph>Click below to move to Stage 3 when instructed:</emph></p>
+  <button onclick="window.location.href='https://ideas3design.com/idetc2025-tse/stage1.php';">Back to Stage 1</button>
+  <button onclick="window.location.href='https://ideas3design.com/idetc2025-tse/stage3.php';">To Stage 3</button>
+
+
   <form method="post" action="" id="form-input" target="_self">
     Group ID: <input type="text" id="group_id" name="group_id">
     <input type="hidden" id="stage" name="stage" value="2">
