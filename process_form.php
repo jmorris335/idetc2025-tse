@@ -13,7 +13,7 @@ if (isset($_POST['params'])) {
 printf("<p> WORDS2 </p>");
 
 $conn = connectToServer(to_print: true);
-// $conn->query("USE tseworkshop;");
+$conn->query("USE tseworkshop;");
 
 $col_names = array("GroupID", "Stage", "TreadWidth", "WheelBase", "RoofHeight", "SuspensionTravel", "MaxTorque", "Gearing", "TireDia", "EnergyCapacity", "FrameRailThick", "BodyPanelThick");
 $db_values = array_merge(array($group, $stage), $params);

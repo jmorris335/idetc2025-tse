@@ -101,8 +101,8 @@ function GVfun(params) {
     let metrics = Array()
     for (let i=0; i < weights.length; i++) {
         var weighted_val = vectorProd(norm_params, tran_weights[i]);
-        var norm_scalar = norms[1][i] / (norms[0][i] - norms[1][i]);
-        weighted_val = weighted_val - norm_scalar;
+        // var norm_scalar = norms[1][i] / (norms[0][i] - norms[1][i]);
+        weighted_val = (weighted_val - norms[1][i]) / (norms[0][i] - norms[1][i]);;
         metrics.push(weighted_val);
     }
 

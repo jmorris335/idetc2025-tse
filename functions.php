@@ -9,40 +9,15 @@
  * @return mysqli::construct The connection to the database 
  */
 function connectToServer(string $servername = "mysql.ideas3design.com", string $username = "tseworkshop", string $password = "4meredith", bool $to_print = true) {       
-    // Create connection for Windows
-    // if(OSisWindows()) {    
-    //     $conn = new mysqli("localhost","root","root",null,8889);  
-    //     // Check connection  
-    //     if ($conn->connect_error) {
-    //         die("Connection failed: " . $conn->connect_error);
-    //     }
-    //     if ($to_print) {
-    //         echo "Connected successfully";
-    //     }
-    // }
-    // Create connection for other OS
-    // else {
-        $conn = new mysqli($servername, $username, $password);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        if ($to_print) {
-            echo "Connected successfully";
-        }
-    // }
-    return $conn;
-}
-
-    /**
- * Returns true if the current OS is a Windows platform, otherwise returns false
- */
-function OSisWindows() {
-    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-        return true;
-    } else {
-        return false;
+    $conn = new mysqli($servername, $username, $password);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
+    if ($to_print) {
+        echo "Connected successfully";
+    }
+    return $conn;
 }
 
 /**
@@ -87,6 +62,7 @@ function insertParams(string $table_name, array $col_set, array $values_set, mys
     }
     
     $query = "INSERT INTO TSEWorkshop.$table_name ($col_str) VALUES $values_str;";
+    printf($query);
     $conn->query($query);
     return $query;
 }

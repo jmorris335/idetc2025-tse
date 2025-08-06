@@ -95,7 +95,7 @@ form.addEventListener('submit', function(event) {
     metrics = GVfun(params);
 
     showMetrics(metrics);
-    sendParamstoDB(params);
+    sendParamstoDB(params, form);
 })
 
 function getParamArray(inputs) {

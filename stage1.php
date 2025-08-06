@@ -16,8 +16,8 @@
   <p>Enter values here:</p>
 
   <form method="post" action="" id="form-input" target="_self">
-    Group ID: <input type="text" id="group_id">
-    <input type="hidden" id="stage" value="1">
+    Group ID: <input type="text" id="group_id" name="group_id">
+    <input type="hidden" id="stage" name="stage" value="1">
     <div id="input-container"></div>
     <input type="submit">
   </form>
