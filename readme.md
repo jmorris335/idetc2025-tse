@@ -2,11 +2,11 @@
 URL: [ideas3design.com/idetc2025-tse](https://www.ideas3design.com/idetc2025-tse)
 
 ## Structure
-Math and Models: `model.js`
-Formatting and Data Handling: `tse_input.js`
-TSE page: `stage#.php`
-Landing page: `index.html` (Copy this into the root `cturne9/ideas3design.com` if you want people to see this on the main website)
-Dev:
+Math and Models: `model.js`  
+Formatting and Data Handling: `tse_input.js`  
+TSE page: `stage#.php`  
+Landing page: `index.html` (Copy this into the root `cturne9/ideas3design.com` if you want people to see this on the main website)  
+Dev:  
 - Styling: `tse_style.css`
 - PHP functions: `functions.php`
 - Actual DB insertion: `process_form.php`
