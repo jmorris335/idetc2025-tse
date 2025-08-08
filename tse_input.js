@@ -127,19 +127,19 @@ function showMetrics(metrics) {
 
 function calcHeatMapColor(value) {
     if (value < 0.1) {
-        return '#fd7272ff';
+        return '#dc6363ff';
     }
     else if (value < 0.25) {
-        return '#ffb19fff';
+        return '#ff9f9fff';
     }
     else if (value < 0.4) {
-        return '#fefdaaff';
+        return '#ffd8d1ff';
     }
     else if (value < 0.6) {
-        return '#f2f2f2ff';
+        return '#ffffe3ff';
     }
     else if (value < 0.75) {
-        return '#c0fa91ff';
+        return '#d0fe9fff';
     }
     else if (value < 0.9) {
         return '#8bfb8dff';
