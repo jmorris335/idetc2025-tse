@@ -116,11 +116,37 @@ function showMetrics(metrics) {
     const new_row = metric_table.insertRow(1);
     metrics.forEach((metric, index) => {
         const cell = new_row.insertCell();
+        color = calcHeatMapColor(metric);
         metric = metric * 100;
         metric = metric.toFixed(1);
         metric = parseInt(metric);
         cell.textContent = metric;
+        cell.style = "background-color: ".concat(color, ";");
     });
+}
+
+function calcHeatMapColor(value) {
+    if (value < 0.1) {
+        return '#fd7272ff';
+    }
+    else if (value < 0.25) {
+        return '#ffb19fff';
+    }
+    else if (value < 0.4) {
+        return '#fefdaaff';
+    }
+    else if (value < 0.6) {
+        return '#f2f2f2ff';
+    }
+    else if (value < 0.75) {
+        return '#c0fa91ff';
+    }
+    else if (value < 0.9) {
+        return '#8bfb8dff';
+    }
+    else {
+        return '#28cf62ff';
+    }
 }
 
 function sendParamstoDB(params, form) {
