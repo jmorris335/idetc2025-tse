@@ -1,3 +1,12 @@
+<?php
+// Get the number from the GET request
+$group_id = isset($_GET['group_id']) ? htmlspecialchars($_GET['group_id']) : '';
+if ($group_id === '') {
+    // Redirect back if no number provided
+    header("Location: index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,18 +20,24 @@
     <script src="tse_input.js" defer></script>
 </head>
 <body>
-  <h1>ASME IDETC Tradespace Exploration Workshop: Stage 2</h1>
+  <h1>Adventures in Tradespace Exploration: Stage 2</h1>
+  
+  <div class="nav_buttons">
+    <form action="stage1.php" method="get">
+      <input type="hidden" name="group_id" value="<?php echo $group_id; ?>">
+      <button type="submit" class="nav_submit">Return to Stage 1 (if needed)</button>
+    </form>
+    <form action="stage3.php" method="get">
+        <input type="hidden" name="group_id" value="<?php echo $group_id; ?>">
+        <button type="submit" class="nav_submit">Continue to Stage 3</button>
+    </form>
+  </div>
 
-  <p><emph>Click below to move to Stage 3 when instructed:</emph></p>
-  <button onclick="window.location.href='https://ideas3design.com/idetc2025-tse/stage1.php';">Back to Stage 1</button>
-  <button onclick="window.location.href='https://ideas3design.com/idetc2025-tse/stage3.php';">To Stage 3</button>
-
-
-  <form method="post" action="" id="form-input" target="_self">
-    Group ID: <input type="text" id="group_id" name="group_id">
-    <input type="hidden" id="stage" name="stage" value="2">
+  <form class="input_form" method="post" action="" id="form-input" target="_self">
+    <input type="hidden" id="group_id" name="group_id" value="<?php echo $group_id; ?>">
+    <input type="hidden" id="stage" name="stage" value="1">
     <div id="input-container"></div>
-    <input type="submit">
+    <button class="table_submit" type="submit">Simulate Vehicle</button>
   </form>
 
   <div id="metric-table"></div>
