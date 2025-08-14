@@ -4,6 +4,7 @@ const resultsTableBody = document.querySelector('#results-table tbody');
 
 // Make Parameter Inputs
 const inputs = [];
+var num_vehicles = 0;
 
 const col1 = document.createElement('div');
 col1.className = 'col-group1'
@@ -75,9 +76,14 @@ const metric_table = document.createElement('table');
 metric_table.className = 'metric-table';
 const thead = document.createElement('thead');
 const header_row = document.createElement('tr');
+id_th = document.createElement('th');
+id_th.textContent = '#';
+header_row.appendChild(id_th);
+
 metric_names.forEach(name => {
     const th = document.createElement('th');
     th.textContent = name;
+    th.style = "min-width: 75px;"
     header_row.appendChild(th);
 });
 thead.appendChild(header_row)
@@ -114,6 +120,9 @@ function getParamArray(inputs) {
 
 function showMetrics(metrics) {
     const new_row = metric_table.insertRow(1);
+    new_row.insertCell().textContent = num_vehicles;
+    num_vehicles += 1;
+
     metrics.forEach((metric, index) => {
         const cell = new_row.insertCell();
         color = calcHeatMapColor(metric);

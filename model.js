@@ -21,16 +21,16 @@ let param_names = [
 ]
 
 let param_labels = [
-    ['Track Width', 0],
-    ['Wheel Base', 0],
-    ['Roof Height', 0],
-    ['Suspension Travel', 1],
-    ['Max Torque', 1],
+    ['Track Width (in)', 0],
+    ['Wheel Base (in)', 0],
+    ['Roof Height (in)', 0],
+    ['Suspension Travel (in)', 1],
+    ['Max Torque (ft-lbs)', 1],
     ['Driveline Gearing', 1],
-    ['Tire Size', 1],
-    ['Energy Capacity', 1],
-    ['Frame Rail Wall Thickness', 0],
-    ['Body Panel Wall Thickness', 0]
+    ['Tire Size (in)', 1],
+    ['Energy Capacity (kW)', 1],
+    ['Frame Rail Wall Thickness (in)', 0],
+    ['Body Panel Wall Thickness (in)', 0]
 ]
 
 const minNmax = [
@@ -61,14 +61,14 @@ for (var i=0; i < param_names.length; i++) {
 const metric_names = [
     'Top Speed',
     'Acceleration',
-    'Offroad Handling',
-    'Range',
-    'Maneuverability',
-    'Protection',
+    'Off-Road Ability',
+    'Operational Range',
+    'Low-Speed Maneuverability',
+    'Occupant Protection',
     'Maintainability',
-    'Stability',
-    'Towing',
-    'Cabin Space'
+    'Rollover Stability',
+    'Towing Capacity',
+    'Passenger Cabin Space'
 ]
 
 const weights = [

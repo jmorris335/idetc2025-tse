@@ -72,7 +72,7 @@ th, td {
 td {
     max-width: 100px;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
 table.metric-table {
     width: 700px;
