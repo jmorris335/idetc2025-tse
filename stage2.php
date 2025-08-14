@@ -21,13 +21,13 @@ if ($group_id === '') {
 </head>
 <body>
   <h1>Adventures in Tradespace Exploration: Stage 2</h1>
-  
+
   <div class="nav_buttons">
-    <form action="stage1.php" method="get">
+    <form action="stage1.php" method="get" style="margin-right: auto;">
       <input type="hidden" name="group_id" value="<?php echo $group_id; ?>">
       <button type="submit" class="nav_submit">Return to Stage 1 (if needed)</button>
     </form>
-    <form action="stage3.php" method="get">
+    <form action="stage3.php" method="get" style="margin-left: auto;">
         <input type="hidden" name="group_id" value="<?php echo $group_id; ?>">
         <button type="submit" class="nav_submit">Continue to Stage 3</button>
     </form>

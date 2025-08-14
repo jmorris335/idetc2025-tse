@@ -20,10 +20,10 @@ if ($group_id === '') {
     <script src="tse_input.js" defer></script>
 </head>
 <body>
-  <h1>ASME IDETC Tradespace Exploration Workshop: Stage 3</h1>
+  <h1>Adventures in Tradespace Exploration: Stage 3</h1>
 
    <div class="nav_buttons">
-    <form action="stage2.php" method="get">
+    <form action="stage2.php" method="get" style="margin-right: auto;">
         <input type="hidden" name="group_id" value="<?php echo $group_id; ?>">
         <button type="submit" class="nav_submit">Return to Stage 2 (if needed)</button>
     </form>

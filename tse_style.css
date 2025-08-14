@@ -23,8 +23,7 @@ form.input_form {
 }
 .nav_buttons {
     display: flex;
-    gap: 1rem; /* space between forms */
-    align-items: center;
+    width: 600px;
 }
 .image-row {
     padding-top: 50px;
